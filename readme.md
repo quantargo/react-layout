@@ -1,7 +1,7 @@
 # React Layout
 
 - **Drop-in**. No config, Provider or other setup required. Use them where you need them.
-- **Responsive**. Each layout is built to adapt to smaller screen sizes. Instead of fixed @media breakpoints, our components work more like Container Queries (https://philipwalton.com/articles/responsive-components-a-solution-to-the-container-queries-problem/) and adapt their layout based on their own width.
+- **Responsive**. Each layout is built to adapt to smaller screen sizes. Instead of fixed @media breakpoints, our components work more like [Container Queries](https://philipwalton.com/articles/responsive-components-a-solution-to-the-container-queries-problem/) and adapt their layout based on their own width.
 - **Extremely small**. Components are very small in size, so they don’t add bundle overhead. Plus, React Layout has no dependencies.
 - **Customize and abstract however you want**. You control the style and behavior of everything. React Layout does not contain any styles beside necessary layout CSS.
 - **Zero config**. Tweak style parameters and spacing rhythm via CSS Variables (a.k.a. CSS Custom Properties). No complicated setup.
@@ -9,15 +9,13 @@
 
 React Layout focuses on providing simple layout *primitives* which make it possible to build all kinds of layouts, without writing much JS or CSS (or at all). This way you rarely have to manually write CSS Flex rules or fiddle with margin or @media breakpoints.
 
-**Layout components “manage” the layout and spacing for their direct children.**
+**Layout components manage the layout and spacing for their direct children.**
 
----
 
 ## Install
 
 `npm install @quantargo/react-layout`
 
----
 
 ## Usage
 
@@ -66,23 +64,20 @@ function MySection () {
 
 ```
 
----
 
 ## Available Components
 
 **LayoutFlex** -> Direct CSS Flex abstraction
-**LayoutAuto** -> Implements gap prop via the negative-margin-technique https://every-layout.dev/layouts/cluster/. 
-**LayoutHStack** -> Horizontal stack w/ defaults; Adds `collapseAt` prop, via the Holy Albatros technique (https://heydonworks.com/article/the-flexbox-holy-albatross/)
-**LayoutVStack** -> Vertical stack w/ defaults
 
-TBD:
+**LayoutAuto** -> Implements gap prop via the [negative-margin-technique](https://every-layout.dev/layouts/cluster/). 
 
-LayoutColumns
-LayoutMasonry
-LayoutAbsolute/LayoutOverlay
+**LayoutHStack** -> Horizontal stack; Adds `collapseAt` prop, via the [Holy Albatros technique](https://heydonworks.com/article/the-flexbox-holy-albatross/)
+
+**LayoutVStack** -> Vertical stack
 
 
-**Configuration**
+## Configuration
+
 React Layout doesn’t need any configuration out-of-the-box. The components should Just Work.
 
 Some components accept spacing or gap props to control the flow of the layout. These are defined as an integer and the default for `1` is `1rem`. You can customize this relationship via the **`--rl-gap-size`** CSS variable. You can change it globally (e.g. on the `html` element) or locally:

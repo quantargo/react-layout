@@ -1,0 +1,23 @@
+{
+  "name": "react-layout",
+  "version": "1.0.0",
+  "description": "Drop-in layout components with zero configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quantargo/react-layout.git"
+  },
+  "keywords": [
+    "react",
+    "layout"
+  ],
+  "author": "Christian Kaindl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quantargo/react-layout/issues"
+  },
+  "homepage": "https://github.com/quantargo/react-layout#readme"
+}

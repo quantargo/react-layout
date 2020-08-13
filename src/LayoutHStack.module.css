@@ -1,0 +1,8 @@
+.layout-h-stack {
+  flex-wrap: wrap;
+}
+
+.layout-h-stack > * {
+  flex-grow: var(--lhs-flex-grow);
+  flex-basis: calc((var(--lhs-collapse-at) - (100% - (var(--la-gap) * 1em))) * 999);
+}

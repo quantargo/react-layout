@@ -1,0 +1,11 @@
+.layout-auto {
+  display: flex;
+  align-items: stretch;
+}
+.layout-auto > * {
+  margin: calc(var(--la-gap) / 2 * -1 * var(--rl-gap-size, 1rem));
+  flex-grow: 1;
+}
+.layout-auto > * > * {
+  margin: calc(var(--la-gap) / 2 * var(--rl-gap-size, 1rem));
+}

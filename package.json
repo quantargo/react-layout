@@ -2,7 +2,7 @@
   "name": "@quantargo/react-layout",
   "version": "1.0.2",
   "description": "Drop-in layout components with zero configuration",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

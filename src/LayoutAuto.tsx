@@ -1,8 +1,19 @@
 import React from 'react'
-import LayoutFlex from './LayoutFlex'
+import { LayoutFlex, Props as LayoutFlexProps } from './LayoutFlex'
 import styles from './LayoutAuto.module.css'
 
-export default React.forwardRef(function LayoutAuto ({
+type Props = {
+  gap?: number,
+  style?: object,
+  wrapperProps?: {
+    [key: string]: any
+  },
+  [key: string]: any
+} & LayoutFlexProps
+
+type Ref = HTMLElement
+
+export const LayoutAuto = React.forwardRef<Ref, Props>(function LayoutAuto ({
   gap = 1,
   children,
   style,

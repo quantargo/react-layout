@@ -1,14 +1,26 @@
 import React from 'react'
-import LayoutAuto from './LayoutAuto'
+import { LayoutAuto } from './LayoutAuto'
 import styles from './LayoutHStack.module.css'
+import * as CSS from 'csstype'
 
-export default React.forwardRef(function LayoutHStack ({
+type Props = {
+  align?: CSS.Property.AlignItems,
+  collapseAt?: string,
+  className?: string,
+  flexGrow?: number,
+  gap?: number,
+  style?: {
+    [key: string]: any
+  }
+}
+
+type Ref = HTMLElement
+
+export const LayoutHStack = React.forwardRef<Ref, Props>(function LayoutHStack ({
   children,
-  align = 'flex-start',
   collapseAt = '0em',
   className,
-  flexBasis = '0',
-  flexGrow = '1',
+  flexGrow = 1,
   style,
   gap = 1,
   ...props
@@ -18,7 +30,6 @@ export default React.forwardRef(function LayoutHStack ({
       {...props}
       ref={ref}
       direction='row'
-      align={align}
       className={`${styles.layoutHStack} ${className || ''}`}
       style={{
         '--lhs-flex-grow': flexGrow,

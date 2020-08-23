@@ -2,13 +2,29 @@
   "name": "@quantargo/react-layout",
   "version": "1.0.3",
   "description": "Drop-in layout components with zero configuration",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "start": "rollup -c -w"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/quantargo/react-layout.git"
+  },
+  "devDependencies": {
+    "@types/react": "^16.3.13",
+    "@types/react-dom": "^16.0.5",
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.9.1",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "rollup": "^1.29.0",
+    "rollup-plugin-postcss": "^3.1.5",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "standardx": "^5.0.0",
+    "typescript": "^2.8.3"
   },
   "keywords": [
     "react",
@@ -19,5 +35,20 @@
   "bugs": {
     "url": "https://github.com/quantargo/react-layout/issues"
   },
-  "homepage": "https://github.com/quantargo/react-layout#readme"
+  "homepage": "https://github.com/quantargo/react-layout#readme",
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  },
+  "standardx": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ]
+  },
+  "dependencies": {
+    "csstype": "^3.0.2"
+  }
 }

@@ -1,11 +1,12 @@
 # React Layout
 
+NOTE: React Layout is still under development and is not ready for production.
+
 - **Drop-in**. No config, Provider or other setup required. Use them where you need them.
 - **Responsive**. Each layout is built to adapt to smaller screen sizes. Instead of fixed @media breakpoints, our components work more like [Container Queries](https://philipwalton.com/articles/responsive-components-a-solution-to-the-container-queries-problem/) and adapt their layout based on their own width.
 - **Extremely small**. Components are very small in size, so they don’t add bundle overhead. Plus, React Layout has no dependencies.
 - **Customize and abstract however you want**. You control the style and behavior of everything. React Layout does not contain any styles beside necessary layout CSS.
 - **Zero config**. Tweak style parameters and spacing rhythm via CSS Variables (a.k.a. CSS Custom Properties). No complicated setup.
-
 
 React Layout focuses on providing simple layout *primitives* which make it possible to build all kinds of layouts, without writing much JS or CSS (or at all). This way you rarely have to manually write CSS Flex rules or fiddle with margin or @media breakpoints.
 

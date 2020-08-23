@@ -24,7 +24,7 @@ export const LayoutCenter = React.forwardRef<Ref, Props>(function LayoutCenter (
     <Tag
       {...props}
       ref={ref}
-      className={`${styles.layoutCenter} ${className || ''}`}
+      className={`${styles['layout-center']} ${className || ''}`}
       style={{
         maxWidth,
         ...style

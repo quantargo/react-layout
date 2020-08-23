@@ -30,7 +30,7 @@ export const LayoutHStack = React.forwardRef<Ref, Props>(function LayoutHStack (
       {...props}
       ref={ref}
       direction='row'
-      className={`${styles.layoutHStack} ${className || ''}`}
+      className={`${styles['layout-h-stack']} ${className || ''}`}
       style={{
         '--lhs-flex-grow': flexGrow,
         '--lhs-collapse-at': collapseAt,

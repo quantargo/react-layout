@@ -23,7 +23,7 @@ export const LayoutAuto = React.forwardRef<Ref, Props>(function LayoutAuto ({
   return (
     <div
       {...wrapperProps}
-      className={`${styles.layoutAuto} ${wrapperProps.className || ''}`}
+      className={`${styles['layout-auto']} ${wrapperProps.className || ''}`}
     >
       <LayoutFlex
         {...props}

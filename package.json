@@ -1,6 +1,6 @@
 {
   "name": "@quantargo/react-layout",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Drop-in layout components with zero configuration",
   "main": "dist/index.js",
   "scripts": {

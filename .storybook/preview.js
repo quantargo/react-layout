@@ -1,5 +1,7 @@
-
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: { expanded: true }
+  controls: { expanded: true },
+  storySort: {
+    order: ['Introduction']
+  }
 }

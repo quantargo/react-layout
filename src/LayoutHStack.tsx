@@ -1,10 +1,8 @@
 import React from 'react'
 import { LayoutAuto } from './LayoutAuto'
 import styles from './LayoutHStack.module.css'
-import * as CSS from 'csstype'
 
 type Props = {
-  align?: CSS.Property.AlignItems,
   collapseAt?: string,
   className?: string,
   flexGrow?: number,

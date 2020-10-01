@@ -55,8 +55,5 @@
     "plugins": [
       "@typescript-eslint/eslint-plugin"
     ]
-  },
-  "dependencies": {
-    "csstype": "^3.0.3"
   }
 }

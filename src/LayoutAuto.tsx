@@ -2,21 +2,20 @@ import React from 'react'
 import { LayoutFlex, Props as LayoutFlexProps } from './LayoutFlex'
 import styles from './LayoutAuto.module.css'
 
-type Props = {
+export type Props = {
   gap?: number,
-  style?: object,
+  style?: React.CSSProperties,
   wrapperProps?: {
     [key: string]: any
-  },
-  [key: string]: any
-} & LayoutFlexProps
+  }
+} | LayoutFlexProps
 
 type Ref = HTMLElement
 
 export const LayoutAuto = React.forwardRef<Ref, Props>(function LayoutAuto ({
   gap = 1,
   children,
-  style,
+  style = {},
   wrapperProps = {},
   ...props
 }, ref) {
@@ -29,6 +28,7 @@ export const LayoutAuto = React.forwardRef<Ref, Props>(function LayoutAuto ({
         {...props}
         ref={ref}
         style={{
+          // https://stackoverflow.com/questions/52005083/how-to-define-css-variables-in-style-attribute-in-react-and-typescript
           '--la-gap': gap,
           ...style
         }}

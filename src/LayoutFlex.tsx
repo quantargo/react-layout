@@ -6,6 +6,7 @@ import React from 'react'
 
 export type Props = {
   // as?: HTMLElementTagNameMap | CustomComponent<React.ReactType>,
+  // as?: string | (() => React.ReactNode)
   /**
    * Render as custom component
    */
@@ -14,7 +15,8 @@ export type Props = {
   alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch',
   justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'space-around' | 'space-between' | 'space-evenly',
   flexWrap?: 'wrap' | 'wrap-reverse' | 'nowrap' | boolean,
-  style?: React.CSSProperties
+  style?: React.CSSProperties,
+  [key: string]: any
 }
 
 type Ref = HTMLElement

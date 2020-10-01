@@ -5,16 +5,23 @@ import * as CSS from 'csstype'
 //   (...props: Props): React.ReactType<Type>;
 // }
 
-export type Props = {
+export enum flexDirection {
+  'row',
+  'row-reverse',
+  'column',
+  'column-reverse'
+}
+export interface Props {
   // as?: HTMLElementTagNameMap | CustomComponent<React.ReactType>,
-  as?: any,
-  direction?: CSS.Property.FlexDirection,
-  alignItems?: CSS.Property.AlignItems,
-  justifyContent?: CSS.Property.JustifyContent,
-  wrap?: CSS.Property.FlexWrap | boolean,
+  as?: any;
+  direction?: flexDirection;
+  alignItems?: CSS.Property.AlignItems;
+  justifyContent?: CSS.Property.JustifyContent;
+  wrap?: CSS.Property.FlexWrap | boolean;
+  bla?: number;
   style?: {
     [key: string]: any
-  }
+  };
 }
 
 type Ref = HTMLElement

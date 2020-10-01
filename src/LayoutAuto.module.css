@@ -3,6 +3,7 @@
   align-items: stretch;
   width: calc(100% - (var(--rl-gap-size, 1rem) * var(--la-gap)));
   height: calc(100% - (var(--rl-gap-size, 1rem) * var(--la-gap)));
+  contain: layout;
 }
 .layout-auto > * {
   margin: calc(var(--la-gap) / 2 * -1 * var(--rl-gap-size, 1rem));

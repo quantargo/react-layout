@@ -23,7 +23,7 @@ export const LayoutFlex = React.forwardRef<Ref, Props>(function LayoutFlex ({
   as: Tag = 'div',
   flexDirection = 'row',
   alignItems = 'stretch',
-  justifyContent = 'space-between',
+  justifyContent = 'flex-start',
   flexWrap = 'nowrap',
   children,
   style,

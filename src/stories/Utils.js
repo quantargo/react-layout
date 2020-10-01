@@ -15,14 +15,16 @@ export function StoryContainer ({ children }) {
   )
 }
 
-export function StoryChild ({ children }) {
+export function StoryChild ({ children, ...props }) {
   return (
     <div
+      {...props}
       style={{
         backgroundColor: 'white',
         border: '1px dashed black',
         borderRadius: '.5em',
-        padding: '.5em'
+        padding: '.5em',
+        ...(props.style || {})
       }}
     >
       {children}

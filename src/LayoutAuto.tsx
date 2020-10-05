@@ -1,22 +1,24 @@
 import React from 'react'
-import { LayoutFlex, Props as LayoutFlexProps } from './LayoutFlex'
+import { LayoutFlex } from './LayoutFlex'
 import styles from './LayoutAuto.module.css'
 
-export type Props = {
+export type LayoutAutoProps = {
   gap?: number,
   style?: React.CSSProperties,
   wrapperProps?: {
     [key: string]: any
-  }
-} | LayoutFlexProps
+  },
+  [key: string]: any
+}
 
 type Ref = HTMLElement
 
-export const LayoutAuto = React.forwardRef<Ref, Props>(function LayoutAuto ({
+export const LayoutAuto = React.forwardRef<Ref, LayoutAutoProps>(function LayoutAuto ({
   gap = 1,
   children,
   style = {},
   wrapperProps = {},
+  alignItems = 'center',
   ...props
 }, ref) {
   return (
@@ -26,6 +28,7 @@ export const LayoutAuto = React.forwardRef<Ref, Props>(function LayoutAuto ({
     >
       <LayoutFlex
         {...props}
+        alignItems={alignItems}
         ref={ref}
         style={{
           // https://stackoverflow.com/questions/52005083/how-to-define-css-variables-in-style-attribute-in-react-and-typescript

@@ -1,5 +1,5 @@
 import React from 'react'
-import { LayoutAuto, Props } from './LayoutAuto'
+import { LayoutAuto, LayoutAutoProps } from './LayoutAuto'
 import { Story, Meta } from '@storybook/react'
 import { StoryContainer, StoryChild } from './stories/Utils'
 
@@ -8,7 +8,7 @@ export default {
   component: LayoutAuto
 } as Meta
 
-const Template: Story<Props> = (args) => {
+const Template: Story<LayoutAutoProps> = (args) => {
   return (
     <StoryContainer>
       <LayoutAuto {...args}>
@@ -51,4 +51,30 @@ CustomComponent.args = {
 export const CustomTag = Template.bind({})
 CustomTag.args = {
   as: 'article'
+}
+
+export const Button: Story<LayoutAutoProps> = function Button (args) {
+  return (
+    <LayoutAuto {...args}>
+      <span>A button!</span>
+      <span>[ICON]</span>
+    </LayoutAuto>
+  )
+}
+Button.args = {
+  as: 'button',
+  gap: 1,
+  wrapperProps: {
+    style: {
+      backgroundColor: 'whitesmoke'
+    }
+  },
+  style: {
+    width: '100%',
+    justifyContent: 'center',
+    appearance: 'none',
+    border: 'none',
+    padding: '1em',
+    backgroundColor: 'transparent'
+  }
 }

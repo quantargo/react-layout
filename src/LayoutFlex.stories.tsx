@@ -1,5 +1,5 @@
 import React from 'react'
-import { LayoutFlex, Props } from './LayoutFlex'
+import { LayoutFlex, LayoutFlexProps } from './LayoutFlex'
 import { Story, Meta } from '@storybook/react'
 import { StoryContainer, StoryChild } from './stories/Utils'
 
@@ -8,7 +8,7 @@ export default {
   component: LayoutFlex
 } as Meta
 
-const Template: Story<Props> = (args) => {
+const Template: Story<LayoutFlexProps> = (args) => {
   return (
     <StoryContainer>
       <LayoutFlex {...args}>

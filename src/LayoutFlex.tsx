@@ -4,7 +4,7 @@ import React from 'react'
 //   (...props: Props): React.ReactType<Type>;
 // }
 
-export type Props = {
+export type LayoutFlexProps = {
   // as?: HTMLElementTagNameMap | CustomComponent<React.ReactType>,
   // as?: string | (() => React.ReactNode)
   /**
@@ -21,7 +21,7 @@ export type Props = {
 
 type Ref = HTMLElement
 
-export const LayoutFlex = React.forwardRef<Ref, Props>(function LayoutFlex ({
+export const LayoutFlex = React.forwardRef<Ref, LayoutFlexProps>(function LayoutFlex ({
   as: Tag = 'div',
   flexDirection = 'row',
   alignItems = 'stretch',

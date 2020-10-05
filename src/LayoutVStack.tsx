@@ -1,21 +1,22 @@
 import React from 'react'
-import { LayoutAuto } from './LayoutAuto'
+import { LayoutAuto, LayoutAutoProps } from './LayoutAuto'
 
-type Props = {
-
-}
+export type LayoutVStackProps = {} & LayoutAutoProps
 
 type Ref = HTMLElement
 
-export const LayoutVStack = React.forwardRef<Ref, Props>(function LayoutVStack ({
+export const LayoutVStack = React.forwardRef<Ref, LayoutVStackProps>(function LayoutVStack ({
   children,
+  alignItems = 'stretch',
   ...props
 }, ref) {
   return (
     <LayoutAuto
       {...props}
       ref={ref}
-      direction='column'
+      alignItems={alignItems}
+      flexDirection='column'
+
     >
       {children}
     </LayoutAuto>

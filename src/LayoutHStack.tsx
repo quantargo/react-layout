@@ -2,24 +2,22 @@ import React from 'react'
 import { LayoutAuto } from './LayoutAuto'
 import styles from './LayoutHStack.module.css'
 
-type Props = {
+export type LayoutHStackProps = {
   collapseAt?: string,
   className?: string,
   flexGrow?: number,
   gap?: number,
-  style?: {
-    [key: string]: any
-  }
+  style?: React.CSSProperties
 }
 
 type Ref = HTMLElement
 
-export const LayoutHStack = React.forwardRef<Ref, Props>(function LayoutHStack ({
+export const LayoutHStack = React.forwardRef<Ref, LayoutHStackProps>(function LayoutHStack ({
   children,
   collapseAt = '0em',
   className,
   flexGrow = 1,
-  style,
+  style = {},
   gap = 1,
   ...props
 }, ref) {
@@ -27,7 +25,7 @@ export const LayoutHStack = React.forwardRef<Ref, Props>(function LayoutHStack (
     <LayoutAuto
       {...props}
       ref={ref}
-      direction='row'
+      flexDirection='row'
       className={`${styles['layout-h-stack']} ${className || ''}`}
       style={{
         '--lhs-flex-grow': flexGrow,

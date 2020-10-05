@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './LayoutCenter.module.css'
 
-type Props = {
+type LayoutCenterProps = {
   maxWidth: string,
   className?: string
   as?: any,
@@ -12,7 +12,7 @@ type Props = {
 
 type Ref = HTMLElement
 
-export const LayoutCenter = React.forwardRef<Ref, Props>(function LayoutCenter ({
+export const LayoutCenter = React.forwardRef<Ref, LayoutCenterProps>(function LayoutCenter ({
   maxWidth = '1000px',
   as: Tag = 'div',
   children,

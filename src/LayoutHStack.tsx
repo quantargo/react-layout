@@ -4,6 +4,12 @@ import styles from './LayoutHStack.module.css'
 
 export type LayoutHStackProps = {
   collapseAt?: string,
+  /**
+   * If true, the visual order of elements will be reversed when collapsed.
+   *
+   * Useful when implementing sections with alternating rythm (e.g. text left, image right; image left, text right), where in the collapsed state the image should always come before the text.
+   */
+  collapseReversed?: boolean,
   className?: string,
   flexGrow?: number,
   gap?: number,
@@ -15,6 +21,7 @@ type Ref = HTMLElement
 export const LayoutHStack = React.forwardRef<Ref, LayoutHStackProps>(function LayoutHStack ({
   children,
   collapseAt = '0em',
+  collapseReversed = false,
   className,
   flexGrow = 1,
   style = {},
@@ -30,6 +37,7 @@ export const LayoutHStack = React.forwardRef<Ref, LayoutHStackProps>(function La
       style={{
         '--lhs-flex-grow': flexGrow,
         '--lhs-collapse-at': collapseAt,
+        flexWrap: collapseReversed ? 'wrap-reverse' : 'wrap',
         ...style
       }}
       gap={gap}

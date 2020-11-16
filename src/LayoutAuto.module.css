@@ -1,7 +1,6 @@
 .layout-auto {
   display: flex;
   contain: layout;
-  overflow: visible;
 }
 .layout-auto > * {
   margin: calc(var(--la-gap) / 2 * -1 * var(--rl-gap-size, 1rem));

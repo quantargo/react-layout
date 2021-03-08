@@ -13,6 +13,9 @@ export type LayoutAutoProps = {
 
 type Ref = HTMLElement
 
+/**
+ * LayoutAuto is designed to fill the gap for the CSS `gap` property, until it is more widely supported.
+ */
 export const LayoutAuto = React.forwardRef<Ref, LayoutAutoProps>(function LayoutAuto ({
   gap = 1,
   children,

@@ -16,7 +16,7 @@ export default {
   plugins: [
     typescript(),
     postcss({
-      plugins: []
+      extract: true
     })
   ],
   external: ['react', 'react-dom']

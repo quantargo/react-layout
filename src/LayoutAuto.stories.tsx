@@ -1,24 +1,24 @@
 import React from 'react'
-import { LayoutAuto, LayoutAutoProps } from './LayoutAuto'
+import { Auto, LayoutAutoProps } from './LayoutAuto'
 import { Story, Meta } from '@storybook/react'
 import { StoryContainer, StoryChild } from './stories/Utils'
 
 export default {
   title: 'Components/LayoutAuto',
-  component: LayoutAuto
+  component: Auto
 } as Meta
 
 const Template: Story<LayoutAutoProps> = (args) => {
   return (
     <StoryContainer>
-      <LayoutAuto {...args}>
+      <Auto {...args}>
         <StoryChild>Item 1</StoryChild>
         <StoryChild>Item 2</StoryChild>
         <StoryChild>Item 3</StoryChild>
         <StoryChild>Item 4</StoryChild>
         <StoryChild>Item 5</StoryChild>
         <StoryChild>Item 6</StoryChild>
-      </LayoutAuto>
+      </Auto>
     </StoryContainer>
   )
 }
@@ -55,10 +55,10 @@ CustomTag.args = {
 
 export const Button: Story<LayoutAutoProps> = function Button (args) {
   return (
-    <LayoutAuto {...args}>
+    <Auto {...args}>
       <span>A button!</span>
       <span>[ICON]</span>
-    </LayoutAuto>
+    </Auto>
   )
 }
 Button.args = {

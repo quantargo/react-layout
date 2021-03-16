@@ -1,9 +1,7 @@
 .layout-center {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
-  flex-direction: column;
-  padding-left: 2em;
-  padding-right: 2em;
+}
+
+.layout-center > * {
+  max-width: var(--lc-max-width);
 }

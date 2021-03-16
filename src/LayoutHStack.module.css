@@ -1,8 +1,11 @@
 .layout-h-stack {
-
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .layout-h-stack > * {
-  flex-grow: var(--lhs-flex-grow);
-  flex-basis: calc((var(--lhs-collapse-at) - (100% - (var(--la-gap) * 1em))) * 999);
+  margin: 0;
+  /* flex-grow: var(--lhs-flex-grow);
+  flex-basis: calc((var(--lhs-collapse-at) - (100% - (var(--la-gap) * 1em))) * 999); */
 }

@@ -21,7 +21,7 @@ export type LayoutFlexProps = {
 
 type Ref = HTMLElement
 
-export const LayoutFlex = React.forwardRef<Ref, LayoutFlexProps>(function LayoutFlex ({
+export const Flex = React.forwardRef<Ref, LayoutFlexProps>(function LayoutFlex ({
   as: Tag = 'div',
   flexDirection = 'row',
   alignItems = 'stretch',

@@ -1,0 +1,13 @@
+.v-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.v-stack > * {
+  margin: 0;
+}
+
+.inline {
+  display: inline-grid;
+  width: max-content;
+}

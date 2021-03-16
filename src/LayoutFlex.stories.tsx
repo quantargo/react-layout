@@ -1,24 +1,24 @@
 import React from 'react'
-import { LayoutFlex, LayoutFlexProps } from './LayoutFlex'
+import { Flex, LayoutFlexProps } from './LayoutFlex'
 import { Story, Meta } from '@storybook/react'
 import { StoryContainer, StoryChild } from './stories/Utils'
 
 export default {
   title: 'Components/LayoutFlex',
-  component: LayoutFlex
+  component: Flex
 } as Meta
 
 const Template: Story<LayoutFlexProps> = (args) => {
   return (
     <StoryContainer>
-      <LayoutFlex {...args}>
+      <Flex {...args}>
         <StoryChild>Item 1</StoryChild>
         <StoryChild style={{ minWidth: '10em' }}>Item 2</StoryChild>
         <StoryChild>Item 3</StoryChild>
         <StoryChild>Item 4</StoryChild>
         <StoryChild style={{ minWidth: '10em' }}>Item 5</StoryChild>
         <StoryChild>Item 6</StoryChild>
-      </LayoutFlex>
+      </Flex>
     </StoryContainer>
   )
 }

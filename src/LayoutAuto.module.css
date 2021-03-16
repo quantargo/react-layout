@@ -1,11 +1,11 @@
 .layout-auto {
   display: flex;
 }
-.layout-auto > * {
+.layout-auto.layout-auto > * {
   margin: calc(var(--la-gap) / 2 * -1 * var(--rl-gap-size, 1rem));
   width: calc(100% - (var(--rl-gap-size, 1rem) * var(--la-gap) * 2));
   flex-grow: 1;
 }
-.layout-auto > * > * {
+.layout-auto.layout-auto > * > * {
   margin: calc(var(--la-gap) / 2 * var(--rl-gap-size, 1rem));
 }

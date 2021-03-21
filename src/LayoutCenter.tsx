@@ -12,8 +12,7 @@ type LayoutCenterProps = {
 
 type Ref = HTMLElement
 
-// TODO: Rename to Clamp
-export const Center = React.forwardRef<Ref, LayoutCenterProps>(function LayoutCenter ({
+export const Clamp = React.forwardRef<Ref, LayoutCenterProps>(function LayoutCenter ({
   maxWidth,
   as: Tag = 'div',
   axis = 'all',

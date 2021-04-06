@@ -64,11 +64,6 @@ export const Button: Story<LayoutAutoProps> = function Button (args) {
 Button.args = {
   as: 'button',
   gap: 1,
-  wrapperProps: {
-    style: {
-      backgroundColor: 'whitesmoke'
-    }
-  },
   style: {
     width: '100%',
     justifyContent: 'center',

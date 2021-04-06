@@ -4,4 +4,5 @@
 
 .layout-center > * {
   max-width: var(--lc-max-width);
+  width: 100%;
 }

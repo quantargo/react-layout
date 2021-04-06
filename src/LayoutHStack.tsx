@@ -18,6 +18,7 @@ export interface LayoutHStackProps {
   gap?: number
   style?: CSSProperties
   children?: any | Array<any>
+  ratio?: string | CSS.Property.GridTemplateColumns
 }
 
 type Ref = HTMLDivElement
@@ -29,6 +30,7 @@ export const HStack = React.forwardRef<Ref, LayoutHStackProps>(function LayoutHS
   xAlign = 'initial',
   yAlign = 'initial',
   textAlign = 'inherit',
+  ratio,
   // flexGrow = 1,
   style = {},
   gap = 1,
@@ -43,7 +45,7 @@ export const HStack = React.forwardRef<Ref, LayoutHStackProps>(function LayoutHS
       style={{
         gap: _gap,
         gridGap: _gap,
-        gridTemplateColumns: `repeat(${typeof children === 'string' ? 1 : children?.length}, 1fr)`,
+        gridTemplateColumns: ratio || `repeat(${typeof children === 'string' ? 1 : children?.length}, 1fr)`,
         justifyItems: yAlign,
         alignItems: xAlign,
         textAlign: textAlign,

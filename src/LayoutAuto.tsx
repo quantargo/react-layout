@@ -1,15 +1,17 @@
-import React, { CSSProperties, forwardRef } from 'react'
+import React, { CSSProperties, forwardRef, HTMLAttributes, ReactNode } from 'react'
 import { Flex } from './LayoutFlex'
 import styles from './LayoutAuto.module.css'
 import * as CSS from 'csstype'
 
-export interface LayoutAutoProps {
+export interface LayoutAutoProps extends HTMLAttributes<HTMLElement> {
   gap?: number
   style?: CSSProperties
-  as: React.ElementType
+  as?: React.ElementType
   xAlign?: CSS.Property.AlignItems | CSS.Property.JustifyItems
   yAlign?: CSS.Property.AlignItems | CSS.Property.JustifyItems
   className?: string
+  children?: ReactNode
+  [key: string]: any
 }
 
 type Ref = HTMLElement

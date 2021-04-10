@@ -1,12 +1,6 @@
-import React from 'react'
+import React, { HTMLAttributes } from 'react'
 
-// interface CustomComponent<Type> {
-//   (...props: Props): React.ReactType<Type>;
-// }
-
-export type LayoutFlexProps = {
-  // as?: HTMLElementTagNameMap | CustomComponent<React.ReactType>,
-  // as?: string | (() => React.ReactNode)
+export interface LayoutFlexProps extends HTMLAttributes<HTMLElement> {
   /**
    * Render as custom component
    */

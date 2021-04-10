@@ -63,6 +63,7 @@
   "standardx": {
     "globals": [
       "HTMLElement",
+      "HTMLDivElement",
       "HTMLElementTagNameMap"
     ],
     "parser": "@typescript-eslint/parser",

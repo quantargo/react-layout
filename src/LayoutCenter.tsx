@@ -1,13 +1,15 @@
-import React, { CSSProperties } from 'react'
+import React, { CSSProperties, HTMLAttributes, ReactNode } from 'react'
 import styles from './LayoutCenter.module.css'
 
-type LayoutCenterProps = {
-  maxWidth: string | number,
-  axis?: 'x' | 'y' | 'all',
+export interface LayoutCenterProps extends HTMLAttributes<HTMLElement> {
+  maxWidth: string | number
+  axis?: 'x' | 'y' | 'all'
   className?: string
-  as?: React.ElementType,
+  as?: React.ElementType
   style?: CSSProperties
   padding?: string | number
+  children?: ReactNode
+  [key: string]: any
 }
 
 type Ref = HTMLElement

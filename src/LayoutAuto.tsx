@@ -11,6 +11,7 @@ export interface LayoutAutoProps extends HTMLAttributes<HTMLElement> {
   yAlign?: CSS.Property.AlignItems | CSS.Property.JustifyItems
   className?: string
   children?: ReactNode
+  wrap?: CSS.Property.FlexWrap
   [key: string]: any
 }
 
@@ -27,6 +28,7 @@ export const Auto = forwardRef<Ref, LayoutAutoProps>(function LayoutAuto ({
   yAlign = 'center',
   className,
   as = 'div',
+  wrap,
   ...props
 }, ref) {
   // const _gap = typeof gap === 'number' ? `${gap}em` : gap
@@ -40,6 +42,7 @@ export const Auto = forwardRef<Ref, LayoutAutoProps>(function LayoutAuto ({
       ref={ref}
     >
       <Flex
+        flexWrap={wrap}
         style={{
           justifyContent: xAlign,
           alignItems: yAlign,

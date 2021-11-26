@@ -23,6 +23,7 @@ export interface LayoutHStackProps extends HTMLAttributes<HTMLElement> {
 
 type Ref = HTMLElement
 
+// The current HStack should be a "Columns" component. And HStack should be like VStack, but horizontally.
 export const HStack: FunctionComponent<LayoutHStackProps> = forwardRef<Ref, LayoutHStackProps>(function LayoutHStack ({
   children,
   // collapseAt = '0em',
@@ -30,7 +31,7 @@ export const HStack: FunctionComponent<LayoutHStackProps> = forwardRef<Ref, Layo
   xAlign = 'initial',
   yAlign = 'initial',
   textAlign = 'inherit',
-  ratio,
+  ratio, // or maybe "template"?
   as = 'div',
   style = {},
   gap = 1,

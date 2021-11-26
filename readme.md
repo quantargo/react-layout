@@ -1,7 +1,5 @@
 # React Layout
 
-NOTE: React Layout is still under development and is not ready for production.
-
 - **Drop-in**. No config, Provider or other setup required. Use them where you need them.
 - **Responsive**. Each layout is built to adapt to smaller screen sizes. Instead of fixed @media breakpoints, our components work more like [Container Queries](https://philipwalton.com/articles/responsive-components-a-solution-to-the-container-queries-problem/) and adapt their layout based on their own width.
 - **Extremely small**. Components are very small in size, so they don’t add bundle overhead. Plus, React Layout has no dependencies.
@@ -86,7 +84,7 @@ function MySection () {
 
 **LayoutAuto** → Based on LayoutFlex, but implements `gap` prop via the [negative-margin-technique](https://every-layout.dev/layouts/cluster/#the-solution).
 
-**LayoutHStack** → Horizontal stack; Adds `collapseAt` prop, via the [Holy Albatross technique](https://heydonworks.com/article/the-flexbox-holy-albatross/)
+**LayoutHStack** → Horizontal stack; Adds `collapseAt` prop, via the [Holy Albatross technique](https://heydonworks.com/article/the-flexbox-holy-albatross/). Equally spaces its children.
 
 **LayoutVStack** → Vertical stack
 

@@ -10,13 +10,16 @@ export default {
 
 const Template: Story<LayoutHStackProps> = (args) => {
   return (
-    <StoryContainer>
-      <p>Resize to see the collapsed order</p>
-      <LayoutHStack {...args}>
-        <StoryChild>Item 1</StoryChild>
-        <StoryChild>Item 2</StoryChild>
-      </LayoutHStack>
-    </StoryContainer>
+    <>
+      <p>LayoutAuto is used under the hood by VStack and HStack. It renders children spaced with a `gap` prop either vertically, or horizontally.</p>
+      <StoryContainer>
+        <p>Resize to see the collapsed order</p>
+        <LayoutHStack {...args}>
+          <StoryChild>Item 1</StoryChild>
+          <StoryChild>Item 2</StoryChild>
+        </LayoutHStack>
+      </StoryContainer>
+    </>
   )
 }
 

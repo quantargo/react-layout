@@ -10,12 +10,14 @@ React Layout focuses on providing simple layout *primitives* which make it possi
 
 **Layout components manage the layout and spacing for their direct children.**
 
-
 ## Install
 
 ``` sh
 npm install @quantargo/react-layout
 ```
+### Storybook
+
+You can preview all layout components with Storybook, by running `npm run storybook`.
 
 
 ## Usage
@@ -91,7 +93,7 @@ function MySection () {
 
 ## Configuration
 
-React Layout doesn’t need any configuration out-of-the-box. The components should Just Work.
+React Layout doesn’t need any configuration out-of-the-box. The components should Just Work™.
 
 Some components accept spacing or gap props to control the flow of the layout. These are defined as a number (not only integers, so `1.25` is also valid) and the default value assigned to `1` is `1rem`. You can customize this relationship via the **`--rl-gap-size`** CSS variable. You can change it globally (e.g. on the `html` element) or locally by setting it on any HTML element:
 

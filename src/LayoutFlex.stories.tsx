@@ -18,6 +18,16 @@ const Template: Story<LayoutFlexProps> = (args) => {
         <StoryChild>Item 4</StoryChild>
         <StoryChild style={{ minWidth: '10em' }}>Item 5</StoryChild>
         <StoryChild>Item 6</StoryChild>
+        {args.flexWrap === true && (
+          <>
+            <StoryChild style={{ minWidth: '10em' }}>Item 7</StoryChild>
+            <StoryChild>Item 8</StoryChild>
+            <StoryChild style={{ minWidth: '10em' }}>Item 9</StoryChild>
+            <StoryChild>Item 10</StoryChild>
+            <StoryChild style={{ minWidth: '10em' }}>Item 11</StoryChild>
+            <StoryChild>Item 12</StoryChild>
+          </>
+        )}
       </LayoutFlex>
     </StoryContainer>
   )

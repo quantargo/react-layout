@@ -1,26 +1,26 @@
 import React from 'react'
-import { LayoutAuto, LayoutAutoProps } from './LayoutAuto'
+import { LayoutVStack, LayoutVStackProps } from './LayoutVStack'
 import { Story, Meta } from '@storybook/react'
 import { StoryContainer, StoryChild } from './stories/Utils'
 
 export default {
-  title: 'Components/LayoutAuto',
-  component: LayoutAuto
+  title: 'Components/LayoutVStack',
+  component: LayoutVStack
 } as Meta
 
-const Template: Story<LayoutAutoProps> = (args) => {
+const Template: Story<LayoutVStackProps> = (args) => {
   return (
     <>
-      <p>LayoutAuto is used under the hood by VStack and HStack. It renders children spaced with a `gap` prop either vertically, or horizontally.</p>
+      <p>Use the VStack (vertical stack) to create consistently spaced vertical relationships between elements.</p>
       <StoryContainer>
-        <LayoutAuto {...args}>
+        <LayoutVStack {...args}>
           <StoryChild>Item 1</StoryChild>
           <StoryChild>Item 2</StoryChild>
           <StoryChild>Item 3</StoryChild>
           <StoryChild>Item 4</StoryChild>
           <StoryChild>Item 5</StoryChild>
           <StoryChild>Item 6</StoryChild>
-        </LayoutAuto>
+        </LayoutVStack>
       </StoryContainer>
     </>
   )
@@ -33,11 +33,6 @@ OutOfTheBox.args = {}
 export const Gap = Template.bind({})
 Gap.args = {
   gap: 2
-}
-
-export const Vertical = Template.bind({})
-Vertical.args = {
-  flexDirection: 'column'
 }
 
 export const CustomComponent = Template.bind({})
